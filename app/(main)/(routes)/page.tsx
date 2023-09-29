@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-
+import { UserButton } from "@clerk/nextjs/app-beta";
 export default function Home() {
   return (
     <div className="">
-      <p className="text-3xl font-bold text-indigo-500">Discord</p>
-      <Button>Click me</Button>
+      {/* provides with the signout facility button and the route which needs to be redirected to after signout */}
+      <UserButton afterSignOutUrl="/" />
     </div>
   );
 }
